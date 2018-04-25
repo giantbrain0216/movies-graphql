@@ -11,6 +11,7 @@ import javax.servlet.annotation.WebServlet;
 public class GraphQLEndpoint extends SimpleGraphQLServlet {
 
     private static MovieRepository movieRepository = new MovieRepository();
+    private static final String MOVIE_ENDPOINT_URL = "https://api.themoviedb.org/3/discover/movie?api_key=3a79d2f7555b7893d9df6ee500d70c55&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1";
 
     public GraphQLEndpoint() {
         super(buildSchema());
@@ -18,7 +19,7 @@ public class GraphQLEndpoint extends SimpleGraphQLServlet {
     }
 
     private static void loadDataFromApi() {
-        Fetcher fetcher = new Fetcher(movieRepository);
+        Fetcher fetcher = new Fetcher(movieRepository, MOVIE_ENDPOINT_URL);
         fetcher.fetchMovieData();
     }
 

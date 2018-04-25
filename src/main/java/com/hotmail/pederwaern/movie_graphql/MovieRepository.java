@@ -1,6 +1,7 @@
 package com.hotmail.pederwaern.movie_graphql;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 public class MovieRepository {
@@ -16,6 +17,10 @@ public class MovieRepository {
 
     public void addMovie(Movie movie) {
         this.allMovies.add(movie);
+    }
+
+    public void addCollection(Collection<Movie> movies) {
+        this.allMovies.addAll(movies);
     }
 
 }
