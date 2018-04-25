@@ -19,7 +19,7 @@ public class GraphQLEndpoint extends SimpleGraphQLServlet {
 
     private static void loadDataFromApi() {
         Fetcher fetcher = new Fetcher(movieRepository);
-        fetcher.getMovieData();
+        fetcher.fetchMovieData();
     }
 
     private static GraphQLSchema buildSchema() {
