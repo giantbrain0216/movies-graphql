@@ -10,13 +10,15 @@ import javax.servlet.annotation.WebServlet;
 @WebServlet(urlPatterns = "/graphql")
 public class GraphQLEndpoint extends SimpleGraphQLServlet {
 
+    private static MovieRepository movieRepository = new MovieRepository();
+
     public GraphQLEndpoint() {
         super(buildSchema());
 
     }
 
     private static void loadDataFromApi() {
-        Fetcher fetcher = new Fetcher();
+        Fetcher fetcher = new Fetcher(movieRepository);
         fetcher.getMovieData();
     }
 

@@ -6,18 +6,21 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.hotmail.pederwaern.movie_graphql.Movie;
+import com.hotmail.pederwaern.movie_graphql.MovieRepository;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.HttpClientBuilder;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.List;
 
 public class Fetcher {
-    public Fetcher() {
+    public Fetcher(MovieRepository movieRepository) {
+
     }
 
     public void getMovieData() {
@@ -34,21 +37,27 @@ public class Fetcher {
             while ((line = rd.readLine()) != null) {
                 result.append(line);
             }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        // System.out.println("Response code: " + response.getStatusLine().getStatusCode());
-        String json = result.toString();
+            String json = result.toString();
 
-        ObjectMapper objectMapper = new ObjectMapper();
-        try {
+            ObjectMapper objectMapper = new ObjectMapper();
             JsonNode node = objectMapper.readTree(json);
             ArrayNode arrayNode = (ArrayNode) node.get("results");
-            List<Movie> movies = objectMapper.readValue(arrayNode.toString(), new TypeReference<List<Movie>>() {});
+            List<Movie> movies = objectMapper.readValue(arrayNode.toString(), new TypeReference<List<Movie>>(){});
+            System.out.println(movies);
         } catch (IOException e) {
+            //Something went wrong, get sample data from json
+            ObjectMapper objectMapper = new ObjectMapper();
+            try {
+                JsonNode node = objectMapper.readTree(new File("/Users/pederwaern/GraphQL/graphql-java/src/main/resources/sampledata.json"));
+                ArrayNode arrayNode = (ArrayNode) node.get("results");
+                List<Movie> movies = objectMapper.readValue(arrayNode.toString(), new TypeReference<List<Movie>>(){});
+                System.out.println(movies);
+
+            } catch (IOException e1) {
+                e1.printStackTrace();
+            }
+
             e.printStackTrace();
         }
-
     }
-
 }
