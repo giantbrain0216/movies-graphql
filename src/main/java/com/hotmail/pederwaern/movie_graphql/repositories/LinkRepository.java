@@ -1,4 +1,6 @@
-package com.hotmail.pederwaern.movie_graphql;
+package com.hotmail.pederwaern.movie_graphql.repositories;
+
+import com.hotmail.pederwaern.movie_graphql.models.Link;
 
 import java.util.ArrayList;
 import java.util.List;

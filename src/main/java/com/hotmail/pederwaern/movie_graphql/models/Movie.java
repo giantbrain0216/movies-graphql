@@ -1,4 +1,4 @@
-package com.hotmail.pederwaern.movie_graphql;
+package com.hotmail.pederwaern.movie_graphql.models;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

@@ -1,14 +1,15 @@
 type Link {
-    id: ID!
-    url: String!
-    description: String!
+    id: ID
+    url: String
+    description: String
 }
 
 type Query {
     allLinks: [Link]
     allMovies: [Movie]
-    getMovieById(id: String!): Movie
-
+    getMovieById(id: String!): Movie!
+    allUsers: [User]
+    allRatings: [Rating]
 }
 
 type Movie {
@@ -28,9 +29,21 @@ type Movie {
     releaseDate: String
 }
 
+type Rating {
+   id: String!
+   rating: Int!
+   comment: String
+}
+
+type User {
+   id: ID!
+   name: String
+   ratings: [Rating]
+}
 
 type Mutation {
     createLink(url: String!, description: String!): Link
+    createUser(name: String!): User
 }
 
 schema {
