@@ -11,6 +11,14 @@ public class MovieRepository {
         this.allMovies = new ArrayList<>();
     }
 
+    public Movie getMovieById(String id) {
+        return this.allMovies
+                .stream()
+                .filter(movie -> id.equals(movie.getId()))
+                .findFirst()
+                .get();
+    }
+
     public List<Movie> getAllMovies() {
         return this.allMovies;
     }

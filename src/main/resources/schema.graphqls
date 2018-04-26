@@ -6,6 +6,26 @@ type Link {
 
 type Query {
     allLinks: [Link]
+    allMovies: [Movie]
+    getMovieById(id: String!): Movie
+
+}
+
+type Movie {
+    id: String
+    voteCount: Int
+    video: Boolean
+    voteAverage: Float
+    title: String
+    popularity: Float
+    posterPath: String
+    originalLanguage: String
+    originalTitle : String
+    genreIds : [Int]
+    backdropPath: String
+    adult: Boolean
+    overview: String
+    releaseDate: String
 }
 
 

@@ -20,7 +20,8 @@ public class Link {
         return url;
     }
 
-    public String getDescription() {
+    public String getDescription(
+    ) {
         return description;
     }
 

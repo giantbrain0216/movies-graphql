@@ -28,7 +28,7 @@ public class Movie {
     @JsonProperty("vote_count")
     private int voteCount;
 
-    private int id;
+    private String id;
     private boolean video;
 
     @JsonProperty("vote_average")
@@ -56,9 +56,7 @@ public class Movie {
     private String overview;
 
     @JsonProperty("release_date")
-    private String releaseData;
-
-
+    private String releaseDate;
 
     public int getVoteCount() {
         return voteCount;
@@ -68,11 +66,11 @@ public class Movie {
         this.voteCount = voteCount;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -164,12 +162,12 @@ public class Movie {
         this.overview = overview;
     }
 
-    public String getReleaseData() {
-        return releaseData;
+    public String getReleaseDate() {
+        return releaseDate;
     }
 
-    public void setReleaseData(String releaseData) {
-        this.releaseData = releaseData;
+    public void setReleaseDate(String releaseDate) {
+        this.releaseDate = releaseDate;
     }
 
     @Override
@@ -194,7 +192,7 @@ public class Movie {
         if (genreIds != null ? !genreIds.equals(movie.genreIds) : movie.genreIds != null) return false;
         if (backdropPath != null ? !backdropPath.equals(movie.backdropPath) : movie.backdropPath != null) return false;
         if (overview != null ? !overview.equals(movie.overview) : movie.overview != null) return false;
-        return releaseData != null ? releaseData.equals(movie.releaseData) : movie.releaseData == null;
+        return releaseDate != null ? releaseDate.equals(movie.releaseDate) : movie.releaseDate == null;
     }
 
     @Override
@@ -202,7 +200,6 @@ public class Movie {
         int result;
         long temp;
         result = voteCount;
-        result = 31 * result + id;
         result = 31 * result + (video ? 1 : 0);
         temp = Double.doubleToLongBits(voteAverage);
         result = 31 * result + (int) (temp ^ (temp >>> 32));
@@ -216,7 +213,7 @@ public class Movie {
         result = 31 * result + (backdropPath != null ? backdropPath.hashCode() : 0);
         result = 31 * result + (adult ? 1 : 0);
         result = 31 * result + (overview != null ? overview.hashCode() : 0);
-        result = 31 * result + (releaseData != null ? releaseData.hashCode() : 0);
+        result = 31 * result + (releaseDate != null ? releaseDate.hashCode() : 0);
         return result;
     }
 
@@ -236,7 +233,7 @@ public class Movie {
                 ", backdropPath='" + backdropPath + '\'' +
                 ", adult=" + adult +
                 ", overview='" + overview + '\'' +
-                ", releaseData='" + releaseData + '\'' +
+                ", releaseDate='" + releaseDate + '\'' +
                 '}';
     }
 }

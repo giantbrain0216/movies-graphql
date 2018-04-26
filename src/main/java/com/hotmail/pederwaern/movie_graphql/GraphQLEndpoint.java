@@ -29,7 +29,7 @@ public class GraphQLEndpoint extends SimpleGraphQLServlet {
         System.out.println("Running buildSchema");
         return SchemaParser.newParser()
                 .file("schema.graphqls")
-                .resolvers(new Query(linkRepository), new Mutation(linkRepository))
+                .resolvers(new Query(linkRepository, movieRepository), new Mutation(linkRepository))
                 .build()
                 .makeExecutableSchema();
     }
