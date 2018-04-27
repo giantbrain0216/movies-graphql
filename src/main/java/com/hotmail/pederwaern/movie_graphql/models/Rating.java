@@ -2,20 +2,20 @@ package com.hotmail.pederwaern.movie_graphql.models;
 
 public class Rating {
 
-    private String id;
-    private Integer rating;
+    private final String id;
+    private int rating;
     private String comment;
-    private User user;
+    private final User user;
+    private final Movie movie;
 
-    public Rating(Integer rating) {
+    public Rating(String id, Movie movie, User user, int rating, String comment) {
         this.id = id;
+        this.movie = movie;
+        this.user = user;
         this.rating = rating;
-    }
-
-    public Rating(Integer rating, String comment) {
-        this(rating);
         this.comment = comment;
     }
+
 
     public void setComment(String comment) {
         this.comment = comment;
@@ -39,5 +39,9 @@ public class Rating {
 
     public User getUser() {
         return user;
+    }
+
+    public Movie getMovie() {
+        return movie;
     }
 }

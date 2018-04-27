@@ -33,6 +33,8 @@ type Rating {
    id: String!
    rating: Int!
    comment: String
+   user: User!
+   movie: Movie!
 }
 
 type User {
@@ -44,6 +46,7 @@ type User {
 type Mutation {
     createLink(url: String!, description: String!): Link
     createUser(name: String!): User
+    createRating(movieRating: Int!, comment: String!, userId: String!, movieId: String!): Rating
 }
 
 schema {

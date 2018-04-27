@@ -3,42 +3,53 @@ package com.hotmail.pederwaern.movie_graphql.repositories;
 import com.hotmail.pederwaern.movie_graphql.models.Rating;
 import com.hotmail.pederwaern.movie_graphql.models.User;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class UserRepository {
 
-    private List<User> allUsers;
+    private Map<String, User> usersMap;
+    private Map<String, Rating> ratingsMap;
 
     public UserRepository() {
-        allUsers = new ArrayList<>();
-        allUsers.add(new User("1", "Peder Waern"));
-        allUsers.add(new User("2", "John Doe"));
-        allUsers.get(1).addRating(new Rating(1, "Lousy movie"));
+        usersMap = new HashMap<>();
+        ratingsMap = new HashMap<>();
+        createSampleData();
+    }
+
+    private void createSampleData() {
+        User user1 = new User("1", "Peder Waern");
+        User user2 = new User("2", "John Doe");
+        usersMap.put(user1.getId(), user1);
+        usersMap.put(user2.getId(), user2);
     }
 
     public List<User> allUsers() {
-        return this.allUsers;
+        List<User> allUsers = new ArrayList<>();
+        allUsers.addAll(this.usersMap.values());
+        return allUsers;
     }
 
     public User getUserById(String id) {
-        return allUsers.stream().filter(user -> user.getId()
-                .equals(id))
-                .findFirst()
-                .get();
+        return this.usersMap.get(id);
     }
 
     public List<Rating> allRatings() {
         List<Rating> allRatings = new ArrayList<>();
-        for (User user: allUsers) {
+        for (User user: this.usersMap.values()) {
             allRatings.addAll(user.getRatings());
         }
         return allRatings;
     }
 
     public User addUser(User user) {
-        this.allUsers.add(user);
+        this.usersMap.put(user.getId(), user);
         return user;
+    }
+
+    public Rating addRating(Rating rating) {
+        User user = this.usersMap.get(rating.getUser().getId());
+        user.addRating(rating);
+        return rating;
     }
 
 }
