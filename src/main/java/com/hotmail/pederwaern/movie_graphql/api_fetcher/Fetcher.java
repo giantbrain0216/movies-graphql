@@ -18,6 +18,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.List;
 
+
+//TODO Refactor to fetch dynamic URLs
 public class Fetcher {
     private final MovieRepository movieRepository;
     private final String endpointURL;
@@ -32,14 +34,18 @@ public class Fetcher {
 
     public void fetchMovieData() {
         try {
-            this.movieRepository.addCollection(getRemoteMovieData(this.endpointURL));
+            this.movieRepository.addCollection(parseResultNodeToListOfMovies(getRemoteMovieDataAsJSON(this.endpointURL)));
         } catch (IOException e) {
             System.out.println("Could not fetch remote data, proceeding to get sample data");
-            this.movieRepository.addCollection(getSampleMovieDataFromJSON());
+            try {
+                this.movieRepository.addCollection(getJSONDataFromLocalFile(new File("src/main/resources/sampledata.json")));
+            } catch (IOException e1) {
+                e1.printStackTrace();
+            }
         }
     }
 
-    private List<Movie> getRemoteMovieData(String endpoint) throws IOException {
+    private String getRemoteMovieDataAsJSON(String endpoint) throws IOException {
         HttpClient client = HttpClientBuilder.create().build();
         HttpGet request = new HttpGet(endpoint);
         StringBuilder result = new StringBuilder();
@@ -50,25 +56,18 @@ public class Fetcher {
         while ((line = rd.readLine()) != null) {
             result.append(line);
         }
-        String json = result.toString();
-        JsonNode node = objectMapper.readTree(json);
-        return parseResultNodeToListOfMovies(node);
 
+        return result.toString();
     }
 
-    private List<Movie> getSampleMovieDataFromJSON() {
-        try {
-            JsonNode node = objectMapper.readTree(new File("src/main/resources/sampledata.json"));
-            return parseResultNodeToListOfMovies(node);
-
-        } catch (IOException e1) {
-            throw new RuntimeException("Could not parse JSON file");
-        }
+    private List<Movie> getJSONDataFromLocalFile(File file) throws IOException {
+        return parseResultNodeToListOfMovies(objectMapper.readTree(file).toString());
     }
 
-    private List<Movie> parseResultNodeToListOfMovies(JsonNode resultsNode) {
+    private List<Movie> parseResultNodeToListOfMovies(String json) {
         try {
-            ArrayNode resultNode = (ArrayNode) resultsNode.get("results");
+            JsonNode node = objectMapper.readTree(json);
+            ArrayNode resultNode = (ArrayNode) node.get("results");
             return objectMapper.readValue(resultNode.toString(), new TypeReference<List<Movie>>(){});
 
         } catch (IOException e) {
