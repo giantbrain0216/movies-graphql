@@ -1,17 +1,12 @@
-type Link {
-    id: ID
-    url: String
-    description: String
-}
-
 type Query {
-    allLinks: [Link]
     allMovies: [Movie]
     getMovieById(id: String!): Movie!
     allUsers: [User]
     allRatings: [Rating]
+    ratingById(id: String!): Rating
 }
 
+# A type that describes a Movie.
 type Movie {
     id: String
     voteCount: Int
@@ -27,8 +22,10 @@ type Movie {
     adult: Boolean
     overview: String
     releaseDate: String
+    ratings: [Rating]
 }
 
+# A type that represents a users Rating, with an optional Comment.
 type Rating {
    id: String!
    rating: Int!
@@ -44,9 +41,9 @@ type User {
 }
 
 type Mutation {
-    createLink(url: String!, description: String!): Link
     createUser(name: String!): User
     createRating(movieRating: Int!, comment: String!, userId: String!, movieId: String!): Rating
+    deleteRating(id: String!): String
 }
 
 schema {

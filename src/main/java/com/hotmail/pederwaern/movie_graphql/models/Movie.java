@@ -2,27 +2,9 @@ package com.hotmail.pederwaern.movie_graphql.models;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import java.util.ArrayList;
 import java.util.List;
 
-//"vote_count": 682,
-//        "id": 447332,
-//        "video": false,
-//        "vote_average": 7.4,
-//        "title": "A Quiet Place",
-//        "popularity": 114.402061,
-//        "poster_path": "/nAU74GmpUk7t5iklEp3bufwDq4n.jpg",
-//        "original_language": "en",
-//        "original_title": "A Quiet Place",
-//        "genre_ids": [
-//        18,
-//        27,
-//        53,
-//        878
-//        ],
-//        "backdrop_path": "/roYyPiQDQKmIKUEhO912693tSja.jpg",
-//        "adult": false,
-//        "overview": "A family is forced to live in silence while hiding from creatures that hunt by sound.",
-//        "release_date": "2018-04-05"
 
 public class Movie {
     @JsonProperty("vote_count")
@@ -58,6 +40,13 @@ public class Movie {
     @JsonProperty("release_date")
     private String releaseDate;
 
+
+
+    private final List<Rating> ratings = new ArrayList<>();
+
+    public List<Rating> getRatings() {
+        return ratings;
+    }
     public int getVoteCount() {
         return voteCount;
     }

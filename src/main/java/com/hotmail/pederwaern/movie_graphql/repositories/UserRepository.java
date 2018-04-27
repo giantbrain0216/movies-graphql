@@ -1,9 +1,13 @@
 package com.hotmail.pederwaern.movie_graphql.repositories;
 
+import com.hotmail.pederwaern.movie_graphql.models.Movie;
 import com.hotmail.pederwaern.movie_graphql.models.Rating;
 import com.hotmail.pederwaern.movie_graphql.models.User;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class UserRepository {
 
@@ -49,7 +53,21 @@ public class UserRepository {
     public Rating addRating(Rating rating) {
         User user = this.usersMap.get(rating.getUser().getId());
         user.addRating(rating);
+        ratingsMap.put(rating.getId(), rating);
+        rating.getMovie().getRatings().add(rating);
         return rating;
     }
 
+    public String deleteRating(Rating rating) {
+        User user = this.usersMap.get(rating.getUser().getId());
+        user.getRatings().remove(rating);
+        this.ratingsMap.remove(rating.getId());
+        Movie movie = rating.getMovie();
+        movie.getRatings().remove(rating);
+        return "Successfully deleted rating with id: " + rating.getId();
+    }
+
+    public Rating getRatingById(String id) {
+        return this.ratingsMap.get(id);
+    }
 }

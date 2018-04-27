@@ -2,7 +2,6 @@ package com.hotmail.pederwaern.movie_graphql;
 
 import com.coxautodev.graphql.tools.SchemaParser;
 import com.hotmail.pederwaern.movie_graphql.api_fetcher.Fetcher;
-import com.hotmail.pederwaern.movie_graphql.repositories.LinkRepository;
 import com.hotmail.pederwaern.movie_graphql.repositories.MovieRepository;
 import com.hotmail.pederwaern.movie_graphql.repositories.UserRepository;
 import graphql.schema.GraphQLSchema;
@@ -27,12 +26,11 @@ public class GraphQLEndpoint extends SimpleGraphQLServlet {
 
     private static GraphQLSchema buildSchema() {
         loadDataFromApi();
-        LinkRepository linkRepository = new LinkRepository();
         UserRepository userRepository = new UserRepository();
         System.out.println("Running buildSchema");
         return SchemaParser.newParser()
                 .file("schema.graphqls")
-                .resolvers(new Query(linkRepository, movieRepository, userRepository), new Mutation(linkRepository, userRepository, movieRepository))
+                .resolvers(new Query(movieRepository, userRepository), new Mutation(userRepository, movieRepository))
                 .build()
                 .makeExecutableSchema();
     }
