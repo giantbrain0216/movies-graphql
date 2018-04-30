@@ -13,16 +13,19 @@ import graphql.servlet.SimpleGraphQLServlet;
 
 import javax.servlet.annotation.WebServlet;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.List;
+import java.util.Properties;
 
 @WebServlet(urlPatterns = "/graphql")
 public class GraphQLEndpoint extends SimpleGraphQLServlet {
 
     private static MovieRepository movieRepository = new MovieRepository();
-    private static final String MOVIE_ENDPOINT_URL = "https://api.themoviedb.org/3/discover/movie?api_key=3a79d2f7555b7893d9df6ee500d70c55&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1";
-    private static final String CONFIGURATION_ENDPOINT_URL = "https://api.themoviedb.org/3/configuration?api_key=3a79d2f7555b7893d9df6ee500d70c55";
-    private static final String SAMPLE_DATA = "src/main/resources/sampledata.json";
+    private static String MOVIE_ENDPOINT_URL;
+    private static String CONFIGURATION_ENDPOINT_URL;
+    private static String SAMPLE_DATA;
     private static ImageConfig IMAGE_CONFIG;
 
     public GraphQLEndpoint() {
@@ -30,7 +33,8 @@ public class GraphQLEndpoint extends SimpleGraphQLServlet {
     }
 
     private static GraphQLSchema buildSchema() {
-        loadDataFromApi();
+        loadFromProperties();
+        initData();
         UserRepository userRepository = new UserRepository();
         System.out.println("Running buildSchema");
         return SchemaParser.newParser()
@@ -40,7 +44,29 @@ public class GraphQLEndpoint extends SimpleGraphQLServlet {
                 .makeExecutableSchema();
     }
 
-    private static void loadDataFromApi() {
+    private static void loadFromProperties() {
+        Properties prop = new Properties();
+        InputStream input = null;
+        try {
+            input = new FileInputStream("src/main/resources/config.properties");
+            prop.load(input);
+            MOVIE_ENDPOINT_URL = prop.getProperty("movieEndpointUrl");
+            CONFIGURATION_ENDPOINT_URL = prop.getProperty("configurationEndpointUrl");
+            SAMPLE_DATA = prop.getProperty("sampleDataPath");
+
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        } finally {
+            if (input != null) {
+                try {
+                    input.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+    private static void initData() {
         JSONFetcher fetcher = new JSONFetcher();
         addMovieDataToRepository(retrieveMovieData(fetcher));
         retrieveImageConfiguration();

@@ -68,3 +68,4 @@ buildNumber.properties
 /movie-graphql.iml
 /src/main/resources/sampledata.json
 /src/main/java/com/hotmail/pederwaern/movie_graphql/TestServlet.java
+/src/main/resources/config.properties
