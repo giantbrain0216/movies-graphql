@@ -1,4 +1,12 @@
 <web-app>
+    <servlet>
+        <servlet-name>graphql</servlet-name>
+        <servlet-class>com.hotmail.pederwaern.movie_graphql.GraphQLEndpoint</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>graphql</servlet-name>
+        <url-pattern>/graphql</url-pattern>
+    </servlet-mapping>
     <filter>
         <filter-name>cross-origin</filter-name>
         <filter-class>org.eclipse.jetty.servlets.CrossOriginFilter</filter-class>
@@ -7,5 +15,4 @@
         <filter-name>cross-origin</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
-
 </web-app>
