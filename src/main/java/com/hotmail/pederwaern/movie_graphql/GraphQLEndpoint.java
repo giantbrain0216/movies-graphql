@@ -56,6 +56,7 @@ public class GraphQLEndpoint extends SimpleGraphQLServlet {
 
         } catch (IOException ex) {
             ex.printStackTrace();
+            System.err.println("Could not load properties from config.properties");
         } finally {
             if (input != null) {
                 try {
@@ -72,16 +73,6 @@ public class GraphQLEndpoint extends SimpleGraphQLServlet {
         retrieveImageConfiguration();
     }
 
-    private static String retrieveMovieData(JSONFetcher fetcher) {
-        String moviesJson;
-        try {
-            moviesJson = new JSONFetcher().fetchJsonByURL(MOVIE_ENDPOINT_URL);
-        } catch(IOException e) {
-            moviesJson = fetcher.fetchJsonFromFile(new File(SAMPLE_DATA));
-        }
-        return moviesJson;
-    }
-
     private static void addMovieDataToRepository(String moviesJson) {
         JSONParser parsedMovies = new JSONParser(moviesJson, new Movie(), "results", true);
         List<RemoteMovieEntity> movies = parsedMovies.getList();
@@ -90,13 +81,23 @@ public class GraphQLEndpoint extends SimpleGraphQLServlet {
         }
     }
 
+    private static String retrieveMovieData(JSONFetcher fetcher) {
+        String moviesJson;
+        try {
+            moviesJson = new JSONFetcher().fetchJsonByURL(MOVIE_ENDPOINT_URL);
+        } catch(Exception e) {
+            moviesJson = fetcher.fetchJsonFromFile(new File(SAMPLE_DATA));
+        }
+        return moviesJson;
+    }
+
     private static void retrieveImageConfiguration() {
         String configJson;
         try {
             configJson = new JSONFetcher().fetchJsonByURL(CONFIGURATION_ENDPOINT_URL);
             JSONParser parsedConfig = new JSONParser(configJson, new ImageConfig(), "images", false);
             IMAGE_CONFIG = (ImageConfig) parsedConfig.one();
-        } catch (IOException e) {
+        } catch (Exception e) {
             IMAGE_CONFIG = ImageConfig.DEFAULT_CONFIG();
         }
     }
