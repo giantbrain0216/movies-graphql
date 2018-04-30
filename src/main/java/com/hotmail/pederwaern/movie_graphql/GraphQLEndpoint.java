@@ -28,6 +28,7 @@ public class GraphQLEndpoint extends SimpleGraphQLServlet {
     private static String SAMPLE_DATA;
     private static ImageConfig IMAGE_CONFIG;
 
+
     public GraphQLEndpoint() {
         super(buildSchema());
     }
