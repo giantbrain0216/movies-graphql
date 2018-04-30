@@ -1,0 +1,403 @@
+{
+  "page": 1,
+  "total_results": 18690,
+  "total_pages": 935,
+  "results": [
+    {
+      "vote_count": 705,
+      "id": 447332,
+      "video": false,
+      "vote_average": 7.4,
+      "title": "A Quiet Place",
+      "popularity": 117.659719,
+      "poster_path": "/nAU74GmpUk7t5iklEp3bufwDq4n.jpg",
+      "original_language": "en",
+      "original_title": "A Quiet Place",
+      "genre_ids": [
+        18,
+        27,
+        53,
+        878
+      ],
+      "backdrop_path": "/roYyPiQDQKmIKUEhO912693tSja.jpg",
+      "adult": false,
+      "overview": "A family is forced to live in silence while hiding from creatures that hunt by sound.",
+      "release_date": "2018-04-05"
+    },
+    {
+      "vote_count": 6331,
+      "id": 381288,
+      "video": false,
+      "vote_average": 7.1,
+      "title": "Split",
+      "popularity": 41.377332,
+      "poster_path": "/rXMWOZiCt6eMX22jWuTOSdQ98bY.jpg",
+      "original_language": "en",
+      "original_title": "Split",
+      "genre_ids": [
+        27,
+        53
+      ],
+      "backdrop_path": "/4G6FNNLSIVrwSRZyFs91hQ3lZtD.jpg",
+      "adult": false,
+      "overview": "Though Kevin has evidenced 23 personalities to his trusted psychiatrist, Dr. Fletcher, there remains one still submerged who is set to materialize and dominate all the others. Compelled to abduct three teenage girls led by the willful, observant Casey, Kevin reaches a war for survival among all of those contained within him — as well as everyone around him — as the walls between his compartments shatter apart.",
+      "release_date": "2017-01-19"
+    },
+    {
+      "vote_count": 2465,
+      "id": 270303,
+      "video": false,
+      "vote_average": 6.5,
+      "title": "It Follows",
+      "popularity": 41.124909,
+      "poster_path": "/4MrwJZr0R9LbyOgZqwLNmtzzxbu.jpg",
+      "original_language": "en",
+      "original_title": "It Follows",
+      "genre_ids": [
+        27,
+        53
+      ],
+      "backdrop_path": "/nwQgcgGVrKyjlxNzaDZud82pUly.jpg",
+      "adult": false,
+      "overview": "For 19-year-old Jay, fall should be about school, boys and weekends out at the lake. But a seemingly innocent physical encounter turns sour and gives her the inescapable sense that someone, or something, is following her. Faced with this burden, Jay and her teenage friends must find a way to escape the horror that seems to be only a few steps behind.",
+      "release_date": "2014-11-13"
+    },
+    {
+      "vote_count": 2939,
+      "id": 49017,
+      "video": false,
+      "vote_average": 6.2,
+      "title": "Dracula Untold",
+      "popularity": 40.223021,
+      "poster_path": "/4oy4e0DP6LRwRszfx8NY8EYBj8V.jpg",
+      "original_language": "en",
+      "original_title": "Dracula Untold",
+      "genre_ids": [
+        27,
+        28,
+        18,
+        14,
+        10752
+      ],
+      "backdrop_path": "/6UPlIYKxZqUR6Xbpgu1JKG0J7UC.jpg",
+      "adult": false,
+      "overview": "Vlad Tepes is a great hero, but when he learns the Sultan is preparing for battle and needs to form an army of 1,000 boys, including Vlad's son, he vows to find a way to protect his family. Vlad turns to dark forces in order to get the power to destroy his enemies and agrees to go from hero to monster as he's turned into the mythological vampire Dracula.",
+      "release_date": "2014-10-01"
+    },
+    {
+      "vote_count": 5647,
+      "id": 348,
+      "video": false,
+      "vote_average": 8,
+      "title": "Alien",
+      "popularity": 39.919335,
+      "poster_path": "/2h00HrZs89SL3tXB4nbkiM7BKHs.jpg",
+      "original_language": "en",
+      "original_title": "Alien",
+      "genre_ids": [
+        27,
+        878
+      ],
+      "backdrop_path": "/o6Tgvgm0YrrsI9EdhTOX52kPjKX.jpg",
+      "adult": false,
+      "overview": "During its return to the earth, commercial spaceship Nostromo intercepts a distress signal from a distant planet. When a three-member team of the crew discovers a chamber containing thousands of eggs on the planet, a creature inside one of the eggs attacks an explorer. The entire crew is unaware of the impending nightmare set to descend upon them when the alien parasite planted inside its unfortunate host is birthed.",
+      "release_date": "1979-05-25"
+    },
+    {
+      "vote_count": 3940,
+      "id": 679,
+      "video": false,
+      "vote_average": 7.8,
+      "title": "Aliens",
+      "popularity": 37.39283,
+      "poster_path": "/nORMXEkYEbzkU5WkMWMgRDJwjSZ.jpg",
+      "original_language": "en",
+      "original_title": "Aliens",
+      "genre_ids": [
+        27,
+        28,
+        53,
+        878
+      ],
+      "backdrop_path": "/fYoe6SqpNpTjUIIZhLGHfHu1Nt8.jpg",
+      "adult": false,
+      "overview": "When Ripley's lifepod is found by a salvage crew over 50 years later, she finds that terra-formers are on the very planet they found the alien species. When the company sends a family of colonists out to investigate her story, all contact is lost with the planet and colonists. They enlist Ripley and the colonial marines to return and search for answers.",
+      "release_date": "1986-07-18"
+    },
+    {
+      "vote_count": 26,
+      "id": 492336,
+      "video": false,
+      "vote_average": 4.4,
+      "title": "Deep Blue Sea 2",
+      "popularity": 35.419192,
+      "poster_path": "/xqjAHXMJLORx9vVsCTJ6ZPJcr3D.jpg",
+      "original_language": "en",
+      "original_title": "Deep Blue Sea 2",
+      "genre_ids": [
+        878,
+        27,
+        28,
+        10770
+      ],
+      "backdrop_path": "/4HGKkGUXumaDhoaKD63XIk12vWN.jpg",
+      "adult": false,
+      "overview": "When shark conservationist Dr. Misty Calhoun is invited to consult on a top-secret project run by pharmaceutical billionaire Carl Durant, she is shocked to learn that the company is using unpredictable and highly aggressive bull sharks as its test subjects, which soon break loose and cause havoc.",
+      "release_date": "2018-04-17"
+    },
+    {
+      "vote_count": 3238,
+      "id": 176,
+      "video": false,
+      "vote_average": 7.3,
+      "title": "Saw",
+      "popularity": 35.238231,
+      "poster_path": "/dHYvIgsax8ZFgkz1OslE4V6Pnf5.jpg",
+      "original_language": "en",
+      "original_title": "Saw",
+      "genre_ids": [
+        27,
+        9648,
+        80
+      ],
+      "backdrop_path": "/fLL6WfUXvdQee1fD4xuzNnWfVBk.jpg",
+      "adult": false,
+      "overview": "Obsessed with teaching his victims the value of life, a deranged, sadistic serial killer abducts the morally wayward. Once captured, they must face impossible choices in a horrific game of survival. The victims must fight to win their lives back, or die trying...",
+      "release_date": "2004-10-01"
+    },
+    {
+      "vote_count": 3289,
+      "id": 539,
+      "video": false,
+      "vote_average": 8.3,
+      "title": "Psycho",
+      "popularity": 34.360035,
+      "poster_path": "/81d8oyEFgj7FlxJqSDXWr8JH8kV.jpg",
+      "original_language": "en",
+      "original_title": "Psycho",
+      "genre_ids": [
+        18,
+        27,
+        53
+      ],
+      "backdrop_path": "/3md49VBCeqY6MSNyAVY6d5eC6bA.jpg",
+      "adult": false,
+      "overview": "When larcenous real estate clerk Marion Crane goes on the lam with a wad of cash and hopes of starting a new life, she ends up at the notorious Bates Motel, where manager Norman Bates cares for his housebound mother. The place seems quirky, but fine… until Marion decides to take a shower.",
+      "release_date": "1960-06-16"
+    },
+    {
+      "vote_count": 7251,
+      "id": 346364,
+      "video": false,
+      "vote_average": 7.1,
+      "title": "It",
+      "popularity": 33.819126,
+      "poster_path": "/9E2y5Q7WlCVNEhP5GiVTjhEhx1o.jpg",
+      "original_language": "en",
+      "original_title": "It",
+      "genre_ids": [
+        18,
+        27,
+        53
+      ],
+      "backdrop_path": "/tcheoA2nPATCm2vvXw2hVQoaEFD.jpg",
+      "adult": false,
+      "overview": "In a small town in Maine, seven children known as The Losers Club come face to face with life problems, bullies and a monster that takes the shape of a clown called Pennywise.",
+      "release_date": "2017-09-05"
+    },
+    {
+      "vote_count": 1932,
+      "id": 133805,
+      "video": false,
+      "vote_average": 5.8,
+      "title": "Carrie",
+      "popularity": 33.048406,
+      "poster_path": "/j0999NYddCGcishJlxluDRQIn6k.jpg",
+      "original_language": "en",
+      "original_title": "Carrie",
+      "genre_ids": [
+        18,
+        27
+      ],
+      "backdrop_path": "/5BfneohdM0YDdK3tX0AKHz2JCkA.jpg",
+      "adult": false,
+      "overview": "A reimagining of the classic horror tale about Carrie White, a shy girl outcast by her peers and sheltered by her deeply religious mother, who unleashes telekinetic terror on her small town after being pushed too far at her senior prom.",
+      "release_date": "2013-10-16"
+    },
+    {
+      "vote_count": 3383,
+      "id": 578,
+      "video": false,
+      "vote_average": 7.5,
+      "title": "Jaws",
+      "popularity": 31.677866,
+      "poster_path": "/l1yltvzILaZcx2jYvc5sEMkM7Eh.jpg",
+      "original_language": "en",
+      "original_title": "Jaws",
+      "genre_ids": [
+        27,
+        53,
+        12
+      ],
+      "backdrop_path": "/uTVuKo6OTGiead1ncsfH2klqYHC.jpg",
+      "adult": false,
+      "overview": "An insatiable great white shark terrorizes the townspeople of Amity Island, The police chief, an oceanographer and a grizzled shark hunter seek to destroy the bloodthirsty beast.",
+      "release_date": "1975-06-18"
+    },
+    {
+      "vote_count": 5472,
+      "id": 694,
+      "video": false,
+      "vote_average": 8.1,
+      "title": "The Shining",
+      "popularity": 30.959135,
+      "poster_path": "/9fgh3Ns1iRzlQNYuJyK0ARQZU7w.jpg",
+      "original_language": "en",
+      "original_title": "The Shining",
+      "genre_ids": [
+        27,
+        53
+      ],
+      "backdrop_path": "/h4DcDCOkQBENWBJZjNlPv3adQfM.jpg",
+      "adult": false,
+      "overview": "Jack Torrance accepts a caretaker job at the Overlook Hotel, where he, along with his wife Wendy and their son Danny, must live isolated from the rest of the world for the winter. But they aren't prepared for the madness that lurks within.",
+      "release_date": "1980-05-22"
+    },
+    {
+      "vote_count": 2049,
+      "id": 8077,
+      "video": false,
+      "vote_average": 6.2,
+      "title": "Alien³",
+      "popularity": 30.36929,
+      "poster_path": "/p7mUd9GpmCYV5qhkKGmiEerFK3i.jpg",
+      "original_language": "en",
+      "original_title": "Alien³",
+      "genre_ids": [
+        878,
+        28,
+        27
+      ],
+      "backdrop_path": "/oVV6z4Tqbklvy2uQAPAKZGokqzS.jpg",
+      "adult": false,
+      "overview": "After escaping with Newt and Hicks from the alien planet, Ripley crash lands on Fiorina 161, a prison planet and host to a correctional facility. Unfortunately, although Newt and Hicks do not survive the crash, a more unwelcome visitor does. The prison does not allow weapons of any kind, and with aid being a long time away, the prisoners must simply survive in any way they can.",
+      "release_date": "1992-05-22"
+    },
+    {
+      "vote_count": 2921,
+      "id": 22970,
+      "video": false,
+      "vote_average": 6.6,
+      "title": "The Cabin in the Woods",
+      "popularity": 30.293888,
+      "poster_path": "/utfJuX6DfR28Mv2FMfnPFAYOmTU.jpg",
+      "original_language": "en",
+      "original_title": "The Cabin in the Woods",
+      "genre_ids": [
+        27,
+        35,
+        53
+      ],
+      "backdrop_path": "/214TKe8WBBbFXVrBRV9RECeE4oW.jpg",
+      "adult": false,
+      "overview": "Five college friends spend the weekend at a remote cabin in the woods, where they get more than they bargained for. Together, they must discover the truth behind the cabin in the woods.",
+      "release_date": "2012-04-12"
+    },
+    {
+      "vote_count": 2042,
+      "id": 1091,
+      "video": false,
+      "vote_average": 7.8,
+      "title": "The Thing",
+      "popularity": 30.135965,
+      "poster_path": "/s5fH3GqFcHbi2F0NSBSh4KRNTc0.jpg",
+      "original_language": "en",
+      "original_title": "The Thing",
+      "genre_ids": [
+        27,
+        9648,
+        878
+      ],
+      "backdrop_path": "/7mdGrxp3ZL2OqNSrQ5LoYySi5MH.jpg",
+      "adult": false,
+      "overview": "Scientists in the Antarctic are confronted by a shape-shifting alien that assumes the appearance of the people it kills.",
+      "release_date": "1982-06-25"
+    },
+    {
+      "vote_count": 2078,
+      "id": 109428,
+      "video": false,
+      "vote_average": 6.4,
+      "title": "Evil Dead",
+      "popularity": 29.622684,
+      "poster_path": "/z56CMoFXOhq4zieKMsokLaiB4qE.jpg",
+      "original_language": "en",
+      "original_title": "Evil Dead",
+      "genre_ids": [
+        27
+      ],
+      "backdrop_path": "/iGXajcdwnN4B540ZQrNY1peT1gR.jpg",
+      "adult": false,
+      "overview": "Evil Dead, the fourth installment of the Evil Dead franchise, serving as both a reboot and as a loose continuation of the series, features Mia, a young woman struggling with sobriety, heads to a remote cabin with a group of friends where the discovery of a Book of the Dead unwittingly summon up dormant demons which possess the youngsters one by one.",
+      "release_date": "2013-04-05"
+    },
+    {
+      "vote_count": 3145,
+      "id": 158015,
+      "video": false,
+      "vote_average": 6.1,
+      "title": "The Purge",
+      "popularity": 29.286071,
+      "poster_path": "/tGGJOuLHX7UDlTz57sjfhW1qreP.jpg",
+      "original_language": "en",
+      "original_title": "The Purge",
+      "genre_ids": [
+        878,
+        27,
+        53
+      ],
+      "backdrop_path": "/1sZ9Nnic1ldHhHttAMDmNxaNM04.jpg",
+      "adult": false,
+      "overview": "Given the country's overcrowded prisons, the U.S. government begins to allow 12-hour periods of time in which all illegal activity is legal. During one of these free-for-alls, a family must protect themselves from a home invasion.",
+      "release_date": "2013-05-31"
+    },
+    {
+      "vote_count": 1605,
+      "id": 91586,
+      "video": false,
+      "vote_average": 6.6,
+      "title": "Insidious: Chapter 2",
+      "popularity": 28.392421,
+      "poster_path": "/qjzk0pig5c7aTLlvKzcegD9PXA.jpg",
+      "original_language": "en",
+      "original_title": "Insidious: Chapter 2",
+      "genre_ids": [
+        27,
+        53
+      ],
+      "backdrop_path": "/59baGxEztxeXW1oFjs8EBgXxTXk.jpg",
+      "adult": false,
+      "overview": "The haunted Lambert family seeks to uncover the mysterious childhood secret that has left them dangerously connected to the spirit world.",
+      "release_date": "2013-09-12"
+    },
+    {
+      "vote_count": 2382,
+      "id": 49018,
+      "video": false,
+      "vote_average": 6.8,
+      "title": "Insidious",
+      "popularity": 27.06941,
+      "poster_path": "/6Tjg6DWVo2cpqDLxrOQNw1UvIMB.jpg",
+      "original_language": "en",
+      "original_title": "Insidious",
+      "genre_ids": [
+        27,
+        53
+      ],
+      "backdrop_path": "/xVNR5eperbCm1DI1JfGhUXd4lqm.jpg",
+      "adult": false,
+      "overview": "A family discovers that dark spirits have invaded their home after their son inexplicably falls into an endless sleep. When they reach out to a professional for help, they learn things are a lot more personal than they thought.",
+      "release_date": "2010-09-13"
+    }
+  ]
+}

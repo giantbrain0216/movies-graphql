@@ -66,6 +66,5 @@ buildNumber.properties
 !/.mvn/wrapper/maven-wrapper.jar
 
 /movie-graphql.iml
-/src/main/resources/sampledata.json
 /src/main/java/com/hotmail/pederwaern/movie_graphql/TestServlet.java
 /src/main/resources/config.properties
