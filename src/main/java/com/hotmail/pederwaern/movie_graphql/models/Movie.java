@@ -5,8 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.ArrayList;
 import java.util.List;
 
-
-public class Movie {
+public class Movie implements RemoteMovieEntity {
     @JsonProperty("vote_count")
     private int voteCount;
 

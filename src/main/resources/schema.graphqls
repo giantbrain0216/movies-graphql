@@ -1,9 +1,11 @@
+# All available queries
 type Query {
     allMovies: [Movie]
     getMovieById(id: String!): Movie!
     allUsers: [User]
     allRatings: [Rating]
     ratingById(id: String!): Rating
+    config: ImageConfiguration
 }
 
 # A type that describes a Movie.
@@ -38,6 +40,16 @@ type User {
    id: ID!
    name: String
    ratings: [Rating]
+}
+# Configuration for images
+type ImageConfiguration {
+    baseUrl: String!
+    secureBaseUrl: String!
+    logoSizes: [String!]
+    posterSizes: [String!]
+    profileSizes: [String!]
+    stillSizes: [String!]
+    backdropSizes: [String!]
 }
 
 type Mutation {

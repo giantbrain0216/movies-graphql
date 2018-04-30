@@ -1,6 +1,7 @@
 package com.hotmail.pederwaern.movie_graphql;
 
 import com.coxautodev.graphql.tools.GraphQLRootResolver;
+import com.hotmail.pederwaern.movie_graphql.models.ImageConfig;
 import com.hotmail.pederwaern.movie_graphql.models.Movie;
 import com.hotmail.pederwaern.movie_graphql.models.Rating;
 import com.hotmail.pederwaern.movie_graphql.models.User;
@@ -13,10 +14,12 @@ public class Query implements GraphQLRootResolver {
 
     private final MovieRepository movieRepository;
     private final UserRepository userRepository;
+    private final ImageConfig config;
 
-    public Query(MovieRepository movieRepository, UserRepository userRepository) {
+    public Query(MovieRepository movieRepository, UserRepository userRepository, ImageConfig config) {
         this.movieRepository = movieRepository;
         this.userRepository = userRepository;
+        this.config = config;
     }
 
     public List<User> allUsers() {
@@ -35,6 +38,9 @@ public class Query implements GraphQLRootResolver {
 
     public Rating ratingById(String id) {
         return userRepository.getRatingById(id);
+    }
 
+    public ImageConfig config() {
+        return this.config;
     }
 }
