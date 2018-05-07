@@ -40,6 +40,8 @@ public class Query implements GraphQLRootResolver {
         return userRepository.getRatingById(id);
     }
 
+    public Rating ratingByUserAndMovie(String userId, String movieId) { return userRepository.getRatingByUserAndMovie(userId, movieId);}
+
     public ImageConfig config() {
         return this.config;
     }

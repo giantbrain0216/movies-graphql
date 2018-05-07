@@ -70,4 +70,11 @@ public class UserRepository {
     public Rating getRatingById(String id) {
         return this.ratingsMap.get(id);
     }
+
+    public Rating getRatingByUserAndMovie(String userId, String movieId) {
+        return ratingsMap.values().stream().filter(rating -> rating.getUser().getId().equals(userId))
+                .filter(rating -> rating.getMovie().getId().equals(movieId))
+                .findFirst()
+                .get();
+    }
 }
