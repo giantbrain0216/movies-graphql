@@ -6,6 +6,7 @@ type Query {
     allRatings: [Rating]
     ratingById(id: String!): Rating
     ratingByUserAndMovie(userId: String!, movieId: String!): Rating
+    getUserById(id: String!): User
     config: ImageConfiguration
 }
 

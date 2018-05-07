@@ -75,6 +75,6 @@ public class UserRepository {
         return ratingsMap.values().stream().filter(rating -> rating.getUser().getId().equals(userId))
                 .filter(rating -> rating.getMovie().getId().equals(movieId))
                 .findFirst()
-                .get();
+                .orElse(new Rating(null,null,null, 0, null));
     }
 }

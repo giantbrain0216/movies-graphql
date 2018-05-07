@@ -26,6 +26,8 @@ public class Query implements GraphQLRootResolver {
         return this.userRepository.allUsers();
     }
 
+    public User getUserById(String id) {return this.userRepository.getUserById(id); }
+
     public List<Movie> allMovies() {
         return movieRepository.getAllMovies();
     }
@@ -36,11 +38,12 @@ public class Query implements GraphQLRootResolver {
 
     public List<Rating> allRatings() {return userRepository.allRatings();}
 
+    public Rating ratingByUserAndMovie(String userId, String movieId) {
+        return this.userRepository.getRatingByUserAndMovie(userId, movieId);
+    }
     public Rating ratingById(String id) {
         return userRepository.getRatingById(id);
     }
-
-    public Rating ratingByUserAndMovie(String userId, String movieId) { return userRepository.getRatingByUserAndMovie(userId, movieId);}
 
     public ImageConfig config() {
         return this.config;
