@@ -36,7 +36,7 @@ public class Mutation implements GraphQLRootResolver {
         return ratingToAdd;
     }
 
-    public String deleteRating(String id) {
+    public Rating deleteRating(String id) {
         Rating ratingToDelete = this.userRepository.getRatingById(id);
         return this.userRepository.deleteRating(ratingToDelete);
     }

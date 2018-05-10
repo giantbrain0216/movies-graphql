@@ -57,7 +57,7 @@ type ImageConfiguration {
 type Mutation {
     createUser(name: String!): User
     createRating(movieRating: Int!, comment: String!, userId: String!, movieId: String!): Rating
-    deleteRating(id: String!): String
+    deleteRating(id: String!): Rating
 }
 
 schema {

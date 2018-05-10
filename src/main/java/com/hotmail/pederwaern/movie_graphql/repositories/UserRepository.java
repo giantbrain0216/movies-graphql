@@ -58,13 +58,13 @@ public class UserRepository {
         return rating;
     }
 
-    public String deleteRating(Rating rating) {
+    public Rating deleteRating(Rating rating) {
         User user = this.usersMap.get(rating.getUser().getId());
         user.getRatings().remove(rating);
         this.ratingsMap.remove(rating.getId());
         Movie movie = rating.getMovie();
         movie.getRatings().remove(rating);
-        return "Successfully deleted rating with id: " + rating.getId();
+        return rating;
     }
 
     public Rating getRatingById(String id) {
