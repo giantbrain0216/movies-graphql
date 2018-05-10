@@ -10,6 +10,8 @@ import com.hotmail.pederwaern.movie_graphql.repositories.MovieRepository;
 import com.hotmail.pederwaern.movie_graphql.repositories.UserRepository;
 import graphql.schema.GraphQLSchema;
 import graphql.servlet.SimpleGraphQLServlet;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.servlet.annotation.WebServlet;
 import java.io.File;
@@ -27,6 +29,7 @@ public class GraphQLEndpoint extends SimpleGraphQLServlet {
     private static String CONFIGURATION_ENDPOINT_URL;
     private static String SAMPLE_DATA;
     private static ImageConfig IMAGE_CONFIG;
+    private static Logger logger = LoggerFactory.getLogger(GraphQLEndpoint.class);
 
 
     public GraphQLEndpoint() {
@@ -37,7 +40,7 @@ public class GraphQLEndpoint extends SimpleGraphQLServlet {
         loadFromProperties();
         initData();
         UserRepository userRepository = new UserRepository();
-        System.out.println("Running buildSchema");
+        logger.info("Building schema...");
         return SchemaParser.newParser()
                 .file("schema.graphqls")
                 .resolvers(new Query(movieRepository, userRepository, IMAGE_CONFIG), new Mutation(userRepository, movieRepository))
