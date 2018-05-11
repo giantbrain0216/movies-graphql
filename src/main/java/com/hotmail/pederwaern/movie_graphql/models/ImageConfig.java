@@ -86,9 +86,18 @@ public class ImageConfig implements RemoteMovieEntity {
         ImageConfig config = new ImageConfig();
         config.setBaseUrl("http://image.tmdb.org/t/p/");
         config.setSecureBaseUrl("https://image.tmdb.org/t/p/");
-        config.backdropSizes = new ArrayList<>(Arrays.asList("w300",
+        config.backdropSizes = new ArrayList<>(Arrays.asList(
+                "w300",
                 "w780",
                 "w1280",
+                "original"));
+        config.posterSizes = new ArrayList<>(Arrays.asList(
+                "w92",
+                "w154",
+                "w185",
+                "w342",
+                "w500",
+                "w780",
                 "original"));
         return config;
     }

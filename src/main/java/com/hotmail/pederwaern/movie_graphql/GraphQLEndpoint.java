@@ -60,7 +60,7 @@ public class GraphQLEndpoint extends SimpleGraphQLServlet {
 
         } catch (IOException ex) {
             ex.printStackTrace();
-            System.err.println("Could not load properties from config.properties");
+            logger.error("Could not load properties");
         } finally {
             if (input != null) {
                 try {
