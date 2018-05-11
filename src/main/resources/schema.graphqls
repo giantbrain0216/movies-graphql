@@ -8,6 +8,7 @@ type Query {
     ratingByUserAndMovie(userId: String!, movieId: String!): Rating
     getUserById(id: String!): User
     config: ImageConfiguration
+    ratingsByUser(id: String!): [Rating]
 }
 
 # A type that describes a Movie.
@@ -36,6 +37,7 @@ type Rating {
    comment: String
    user: User!
    movie: Movie!
+   createdTimeStamp: String
 }
 
 type User {

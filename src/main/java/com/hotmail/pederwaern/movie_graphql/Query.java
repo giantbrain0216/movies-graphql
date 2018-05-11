@@ -51,6 +51,10 @@ public class Query implements GraphQLRootResolver {
     public Rating ratingByUserAndMovie(String userId, String movieId) {
         return this.userRepository.getRatingByUserAndMovie(userId, movieId);
     }
+
+    public List<Rating> ratingsByUser(String id) {
+         return this.userRepository.getUserById(id).getRatings();
+    }
     public Rating ratingById(String id) {
         return userRepository.getRatingById(id);
     }
