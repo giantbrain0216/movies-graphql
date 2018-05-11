@@ -9,6 +9,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * In-memory representation collection of Users and Ratings and operations
+ */
 public class UserRepository {
 
     private Map<String, User> usersMap;

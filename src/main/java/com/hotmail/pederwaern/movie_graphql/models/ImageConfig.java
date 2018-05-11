@@ -82,6 +82,10 @@ public class ImageConfig implements RemoteMovieEntity {
         this.stillSizes = stillSizes;
     }
 
+    /**
+     * This is a fallback function for when data can't be fetched from remote.
+     * @return A default configuration object.
+     */
     public static ImageConfig DEFAULT_CONFIG() {
         ImageConfig config = new ImageConfig();
         config.setBaseUrl("http://image.tmdb.org/t/p/");

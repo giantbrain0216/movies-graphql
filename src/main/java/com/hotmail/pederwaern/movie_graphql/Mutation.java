@@ -11,6 +11,9 @@ import org.slf4j.LoggerFactory;
 
 import java.util.UUID;
 
+/**
+ * Mutation methods that map to the GraphQL schema mutations
+ */
 public class Mutation implements GraphQLRootResolver {
 
     private final UserRepository userRepository;

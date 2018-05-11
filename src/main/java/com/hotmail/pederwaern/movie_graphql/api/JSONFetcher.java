@@ -11,6 +11,9 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+/**
+ * Fetches JSON data through injected endpoint, or from local JSON file.
+ */
 public class JSONFetcher {
 
     ObjectMapper objectMapper = new ObjectMapper();

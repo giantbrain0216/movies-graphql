@@ -12,7 +12,6 @@ import graphql.schema.GraphQLSchema;
 import graphql.servlet.SimpleGraphQLServlet;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import javax.servlet.annotation.WebServlet;
 import java.io.File;
 import java.io.FileInputStream;
@@ -20,6 +19,12 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
 import java.util.Properties;
+
+/**
+ * This class is the main entrypoint for the GraphQL interface.
+ * Data is fetched upon startup from The Movie Database, if unavailable - it retrieves from a sample json file, if there
+ * is one in the project resources folder. To test the api from GraphiQL In-browser Editor, go to 'http://host:port/'
+ **/
 
 @WebServlet(urlPatterns = "/graphql")
 public class GraphQLEndpoint extends SimpleGraphQLServlet {

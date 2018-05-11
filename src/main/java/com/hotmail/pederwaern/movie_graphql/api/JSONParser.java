@@ -1,3 +1,5 @@
+
+
 package com.hotmail.pederwaern.movie_graphql.api;
 
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -12,6 +14,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Parses movie JSON data to Java POJO
+ */
 public class JSONParser {
     // TODO Generalize this class
 

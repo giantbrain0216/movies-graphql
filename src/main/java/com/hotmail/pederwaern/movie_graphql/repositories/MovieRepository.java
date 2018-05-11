@@ -6,6 +6,9 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
+/**
+ * In-memory representation collection of Movies and operations
+ */
 public class MovieRepository {
     private List<Movie> allMovies;
 

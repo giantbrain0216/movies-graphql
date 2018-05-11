@@ -40,6 +40,7 @@ type Rating {
    createdTimeStamp: String
 }
 
+# A type that represents a User, with 0 or more Ratings
 type User {
    id: ID!
    name: String
@@ -56,6 +57,7 @@ type ImageConfiguration {
     backdropSizes: [String!]
 }
 
+# Mutation type
 type Mutation {
     createUser(name: String!): User
     createRating(movieRating: Int!, comment: String!, userId: String!, movieId: String!): Rating
