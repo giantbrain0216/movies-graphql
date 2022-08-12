@@ -1,7 +1,7 @@
 # movies-graphql
 A simple Java server API exposing data through GraphQL
 
-Instructions to run:
+Instructions to run: 
  
 ## Add a file under src/main/resources/ called "config.properties" with the following content:
 `sampleDataPath=src/main/resources/sampledata.json`
