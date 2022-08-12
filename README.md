@@ -12,8 +12,6 @@ Instructions to run:
 
 `configurationEndpointUrl=https://api.themoviedb.org/3/configuration?api_key={API_KEY}`
 
-**NOTE**: Replace {API_KEY} with your own API_KEY, you can register for one for free. Check this link:
-https://developers.themoviedb.org/3/getting-started/introduction
 
 ## Build and run
 
